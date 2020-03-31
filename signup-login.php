@@ -25,7 +25,7 @@
                     <h4 class="signup-login-form-header">SIGNUP</h4>
                     <form action="includes/signup.inc.php" method="POST">
                         <input type="text" name="username" placeholder="Username">
-                        <input type="text" name="email-address" placeholder="Email address">
+                        <input type="text" name="email_address" placeholder="Email address">
                         <input type="password" name="password" placeholder="Password">
                         <input type="submit" class="submit signup-submit" name="signup-submit" value="Signup">
                     </form>
