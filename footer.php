@@ -28,7 +28,7 @@
             </div>
             <form action="">
                 <input type="text" name="fullname" placeholder="Fullname">
-                <input type="text" name="email-address" placeholder="Email address">
+                <input type="text" name="email_address" placeholder="Email address">
                 <input type="text" name="subject" placeholder="Subject">
                 <textarea type="text" name="message" placeholder="Message"></textarea>
                 <input type="submit" class="submit send" name="send" value="Send">

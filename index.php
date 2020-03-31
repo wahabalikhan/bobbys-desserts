@@ -1,4 +1,9 @@
-<?php require 'includes/dbh.inc.php'; ?>
+<?php
+    require 'includes/dbh.inc.php';
+
+    $con = mysqli_connect('localhost','root','root');
+    mysqli_select_db($con,'bobbys_desserts');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,34 +42,31 @@
         <div class="container">
             <h1>Our specials</h1>
             <div class="product-grid grid">
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_2.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">KINDER BUENO WAFFLE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/vegetarian.png" alt="" class="allergy-image">
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_3.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">STRAWBERRY DELIGHT CREPE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/vegetarian.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_4.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">NUTELLA SPREAD CREPE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
+                <?php
+                    $sql = "SELECT * FROM products";
+                    $records = mysqli_query($con, $sql);
+                ?>
+                <?php
+                    while ($row = mysqli_fetch_array($records)) {
+                        if ($row['special'] == 1) {
+                            echo "<div class='product-item'>
+                                <div class='product-image'><img src='assets/img/products/product_image_2.png' alt=''></div>
+                                <div class='product-info'>
+                                <div class='product-name'>".$row['product_name']."</div>
+                                <div class='product-price'>£".$row['product_price']."</div>
+                                <p>".$row['product_description']."</p>"?>
+                            <?php
+                                if ($row['vegetarian'] == 1) {
+                                echo "<img src='assets/img/vegetarian.png' alt='' class='allergy-image'></img>";
+                                }
+                                if ($row['gluten_free'] == 1) {
+                                echo "<img src='assets/img/gluten_free.png' alt='' class='allergy-image'></img>";
+                                }?>
+                            <?php echo"</div>
+                            </div>";
+                        }
+                    }
+                ?>
             </div>
             <a href="" class="menu-tour btn">TAKE A TOUR OF OUR MENU</a>
         </div>
@@ -91,3 +93,14 @@
     <script src="assets/js/app.js"></script>
 </body>
 </html>
+
+<!-- <div class="product-item">
+                    <div class="product-image"><img src="assets/img/products/product_image_2.png" alt=""></div>
+                    <div class="product-info">
+                        <div class="product-name">KINDER BUENO WAFFLE</div>
+                        <div class="product-price">£7.99</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
+                        <img src="assets/img/vegetarian.png" alt="" class="allergy-image">
+                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
+                    </div>
+                </div> -->

@@ -3,7 +3,7 @@
     
     if (isset($_POST['signup-submit'])) {
         $username = $_POST['username'];
-        $emailAddress = $_POST['email-address'];
+        $emailAddress = $_POST['email_address'];
         $password = $_POST['password'];
 
         $sql = "SELECT username FROM users WHERE username=?";
