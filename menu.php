@@ -36,7 +36,7 @@
                 <?php
                     while ($row = mysqli_fetch_array($records)) {
                         echo "<div class='product-item'>
-                            <div class='product-image'><img src='assets/img/products/product_image_2.png' alt=''></div>
+                            <div class='product-image'><img src='".$row['image_directory']."' alt=''></div>
                             <div class='product-info'>
                             <div class='product-name'>".$row['product_name']."</div>
                             <div class='product-price'>£".$row['product_price']."</div>

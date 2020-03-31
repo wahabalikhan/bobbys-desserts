@@ -110,13 +110,14 @@
                         <th>Gluten free</th>
                     </tr>
                     <?php
-                        echo "<tr><form action='includes/insert.inc.php' method='POST'>
+                        echo "<tr><form action='includes/insert.inc.php' method='POST' enctype='multipart/form-data'>
                         <td><input type=text name=product_name value='".$row["product_name"]."'></td>
                         <td><input type=text name=product_price value='".$row["product_price"]."'></td>
                         <td><input type=text name=product_description value='".$row["product_description"]."'></td>
                         <td><input type=text name=special value='".$row["special"]."'></td>
                         <td><select name=vegetarian value='".$row["vegetarian"]."'><option value=1>True</option><option value=0>False</option></td>
                         <td><select name=gluten_free value='".$row["gluten_free"]."'><option value=1>True</option><option value=0>False</option></td>
+                        <td><input type=text name=image_directory value='".$row["image_directory"]."'></td>
                         <input type=hidden name=product_id value='".$row["product_id"]."'>
                         <td><input type='submit' name='add-product' value='Add'></td>
                         </form><tr>";

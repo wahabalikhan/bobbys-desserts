@@ -23,8 +23,9 @@
         $special = $_POST['special'];
         $vegetarian = $_POST['vegetarian'];
         $glutenFree = $_POST['gluten_free'];
+        $imageDirectory = $_POST['image_directory'];
 
-        $sql = ("INSERT INTO products (product_name, product_price, product_description, special, vegetarian, gluten_free) VALUES ('$productName','$productPrice','$productDescription','$special','$vegetarian','$glutenFree')");
+        $sql = ("INSERT INTO products (product_name, product_price, product_description, special, vegetarian, gluten_free, image_directory) VALUES ('$productName','$productPrice','$productDescription','$special','$vegetarian','$glutenFree','$imageDirectory')");
         if (!mysqli_query($con, $sql)) {
             echo "Failed to insert record";
         } else {
