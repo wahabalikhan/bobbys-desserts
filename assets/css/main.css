@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 /* base */
-html {
-    font-weight: 100;
-    font-family: 'Roboto', sans-serif;
-}
 * {
     /* border-box box model allows us to add padding and border to our elements without increasing their size
     We inherit box-sizing: border-box; from our <body> selector */
@@ -25,6 +21,7 @@ html {
 body {
     color: white;
     font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     background-color: #24292e;
     background-image: url('../img/bg.svg'), linear-gradient(#191c20, #24292e 100%);
     background-size: contain;
@@ -321,4 +318,84 @@ textarea {
 .signup-login-form-header {
     font-weight: 900;
     margin-bottom: 30px;
+}
+
+/* responsive */
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 50px;
+    }
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+    .toggle {
+        display: block;
+    }
+    ul {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        padding: 20px 50px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .active {
+        display: block;
+    }
+    ul a {
+        display: block;
+        margin: 40px 0;
+        color: black;
+    }
+    ul .signup-login {
+        color:#66D6B6;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+    .hero {
+        padding-top: 150px;
+    }
+    .slogan {
+        text-align: center;
+    }
+    #searchbar {
+        width: 100%;
+    }
+    #about {
+        margin-bottom: 360px;
+    }
+    #about img {
+        display: none;
+    }
+    .about-box {
+        width: 100%;
+        text-align: center;
+    }
+    .grid {
+        grid-gap: 20px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .signup-login-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-info {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
 }
