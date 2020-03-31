@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+/* base */
+html {
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+* {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size
+    We inherit box-sizing: border-box; from our <body> selector */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    color: white;
+    font-weight: 400;
+    background-color: #24292e;
+    background-image: url('../img/bg.svg'), linear-gradient(#191c20, #24292e 100%);
+    background-size: contain;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1;
+}
+.container {
+    width: 87%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* global */
+section, header {
+    margin: 70px 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+    margin-top: 80px;
+}
+.product-image {
+    float: left;
+    margin: 0;
+}
+.product-image img {
+    border-radius: 999px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+.product-info {
+    float: right;
+    width: 85%;
+}
+.product-name {
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.product-price {
+    float: right;
+    font-weight: 800;
+    margin-top: -47px;
+}
+.allergy-image {
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+}
+input, textarea {
+    background: #2B3034;
+    margin-bottom: 15px;
+    border-radius: 999px;
+    padding: 20px 30px;
+    font-weight: 300;
+    width: 100%;
+}
+.submit {
+    width: 120px;
+    background: #66D6B6;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* buttons */
+.btn {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.btn:hover {
+    opacity: .5;
+}
+
+/* links */
+a {
+    color: black;
+    text-decoration: none;
+    outline: 0;
+}
+
+/* typography */
+h1 {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}
+h2 {
+    font-size: 35px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 300;
+}
+p {
+    font-size: 16px;
+}
+
+/* header */
+header {
+    text-align: center;
+    width: 100%;
+}
+header .container {
+    position: relative;
+}
+.toggle {
+    float: right;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    margin-top: 30px;
+}
+.toggle svg {
+    width: 25px;
+    height: 25px;
+    fill: white;
+}
+header a {
+    color: white;
+    margin-left: 50px;
+    font-weight: 400;
+    transition: .3s ease-in-out;
+}
+header a:hover {
+    opacity: .5
+}
+nav {
+    float: right;
+    margin-top: 30px;
+}
+.logo {
+    cursor: pointer;
+    float: left;
+    margin: 0;
+    font-weight: 900;
+}
+.logo:hover {
+    opacity: 1;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+.signup-login {
+    color:#66D6B6;
+    background: white;
+}
+.hero {
+    z-index: -1;
+    position: relative;
+    padding-top: 200px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.slogan {
+    font-style: italic;
+    right: 180px;
+    top: 290px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+header p {
+    margin: 60px 0 30px;
+}
+.learn-more {
+    color: white;
+    background: #66D6B6;
+    margin: 0;
+}
+
+/* about */
+#about {
+    padding-top: 100px;
+}
+#about .container {
+    position: relative;
+}
+#about img {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.about-box {
+    border-radius: 5px;
+    padding: 4em 3em;
+    background: white;
+    color: black;
+    position: absolute;
+    width: 300px;
+    top: -100px;
+    right: 0;
+}
+.about-box p {
+    margin: 40px 0;
+    font-weight: 100;
+}
+.about-box .specials {
+    color: white;
+    background: #66D6B6;
+}
+
+/* specials */
+#specials .container {
+    text-align: center;
+}
+#specials .product-grid {
+    text-align: left;
+}
+.menu-tour {
+    margin-top: 50px;
+    color: white;
+    background: #66D6B6;
+}
+
+/* gallery */
+.gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px
+}
+.gallery-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* contact */
+.contact-grid {
+    grid-gap: 100px;
+}
+.contact-grid h1 {
+    font-size: 40px;
+    text-align: left;
+}
+.contact-grid p {
+    margin: 50px 0;
+}
+
+.social-icons {
+    max-width: 200px;
+    margin-left: -20px;
+    display: flex;
+    justify-content: space-around;
+}
+.social-icons svg {
+    height: 25px;
+    width: 25px;
+    transition: 0.3s ease-in-out;
+}
+.social-icons svg path {
+    fill: #66D6B6;
+}
+.social-icons svg path:hover {
+    transform: scale(1.2);
+}
+textarea {
+    height: 250px;
+    border-radius: 40px;
+}
+.send {
+    width: 100px;
+    float: right;
+}
+
+/* menu */
+#searchbar {
+    margin-top: 50px;
+    background: #2B3034;
+    border-radius: 999px;
+    padding: 20px 30px;
+    font-weight: 300;
+    width: 500px;
+}
+
+/* signup/login */
+.signup-login-grid {
+    grid-gap: 100px;
+}
+.signup-login-form-header {
+    font-weight: 900;
+    margin-bottom: 30px;
+}
