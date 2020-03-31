@@ -181,7 +181,7 @@ nav {
     width: 100px;
     height: 100px;
 }
-.signup-login {
+.signup-login, .logout {
     color:#66D6B6;
     background: white;
 }
@@ -354,6 +354,9 @@ textarea {
         color:#66D6B6;
         padding: 0;
         margin: 0 0 40px 0;
+    }
+    ul .logout {
+        padding: 0;
     }
     .hero {
         padding-top: 150px;
