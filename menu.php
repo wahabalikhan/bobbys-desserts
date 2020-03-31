@@ -1,3 +1,10 @@
+<?php
+    require 'includes/dbh.inc.php';
+
+    $con = mysqli_connect('localhost','root','root');
+    mysqli_select_db($con,'bobbys_desserts');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,88 +29,29 @@
     <section id="menu">
         <div class="container">
             <div class="product-grid grid">
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_1.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">BELGIUM CHOCOLATE WAFFLE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/vegetarian.png" alt="" class="allergy-image">
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_2.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">KINDER BUENO WAFFLE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/vegetarian.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_3.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">STRAWBERRY DELIGHT CREPE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_4.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">NUTELLA SPREAD CREPE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_5.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">BUBBLEGUM SUNDAE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_6.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">MINTY SUNDAE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_7.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">FERRERO ROCHER CHEESECAKE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_8.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">CHOCOLATE CHIP COOKIE DOUGH</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product-image"><img src="assets/img//products/product_image_9.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">CHOCOLATE FUDGE CAKE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div>
+                <?php
+                    $sql = "SELECT * FROM products";
+                    $records = mysqli_query($con, $sql);
+                ?>
+                <?php
+                    while ($row = mysqli_fetch_array($records)) {
+                        echo "<div class='product-item'>
+                            <div class='product-image'><img src='assets/img/products/product_image_2.png' alt=''></div>
+                            <div class='product-info'>
+                            <div class='product-name'>".$row['product_name']."</div>
+                            <div class='product-price'>£".$row['product_price']."</div>
+                            <p>".$row['product_description']."</p>"?>
+                        <?php
+                            if ($row['vegetarian'] == 1) {
+                            echo "<img src='assets/img/vegetarian.png' alt='' class='allergy-image'></img>";
+                            }
+                            if ($row['gluten_free'] == 1) {
+                            echo "<img src='assets/img/gluten_free.png' alt='' class='allergy-image'></img>";
+                            }?>
+                        <?php echo"</div>
+                        </div>";
+                    }
+                ?>
             </div>
         </div>
     </section>

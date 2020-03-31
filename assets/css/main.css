@@ -66,6 +66,7 @@ section, header, footer {
 .product-name {
     font-weight: 800;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 .product-price {
     float: right;
@@ -74,6 +75,7 @@ section, header, footer {
 }
 .allergy-image {
     margin-top: 10px;
+    margin-right: 10px;
     width: 35px;
     height: 35px;
 }
