@@ -39,7 +39,7 @@ body {
 }
 
 /* global */
-section, header {
+section, header, footer {
     margin: 70px 0;
 }
 .grid {
@@ -84,6 +84,7 @@ input, textarea {
     padding: 20px 30px;
     font-weight: 300;
     width: 100%;
+    color: white;
 }
 .submit {
     width: 120px;
@@ -289,7 +290,7 @@ header p {
 .social-icons svg path {
     fill: #66D6B6;
 }
-.social-icons svg path:hover {
+.social-icons svg:hover {
     transform: scale(1.2);
 }
 textarea {
