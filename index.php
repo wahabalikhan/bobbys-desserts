@@ -68,7 +68,7 @@
                     }
                 ?>
             </div>
-            <a href="" class="menu-tour btn">TAKE A TOUR OF OUR MENU</a>
+            <a href="menu.php" class="menu-tour btn">TAKE A TOUR OF OUR MENU</a>
         </div>
     </section>
     <section id="gallery">
