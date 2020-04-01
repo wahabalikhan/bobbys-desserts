@@ -1,6 +1,5 @@
 <?php
-    $con = mysqli_connect('localhost','root','root');
-    mysqli_select_db($con,'bobbys_desserts');
+    require 'dbh.inc.php';
     
     if (isset($_POST['add-user'])) {
         $username = $_POST['username'];

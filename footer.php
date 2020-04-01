@@ -3,7 +3,10 @@
         <div class="contact-grid grid">
             <div class="contact-info">
                 <h1>Contact us</h1>
-                <p>Feel free to contact us and don't hesitate to leave us a review whilst you're at it. We normally respond within 2 working days but due to an increase in volume, our responses may be delayed.</p>
+                <ul>
+                    <li>Feel free to contact us and don't hesitate to leave us a review whilst you're at it.</li>
+                    <li>We normally respond within 2 working days but due to an increase in volume, our responses may be delayed.</li>
+                </ul>
                 <div class="social-icons">
                     <a href="" class="icon-twitter">
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -24,7 +27,10 @@
                         </svg>
                     </a>
                 </div>
-                <p>© Bobby's Desserts 2020. All rights reserved.</p>
+                <ol>
+                    <li>© Bobby's Desserts 2020.</li>
+                    <li>All rights reserved.</li>
+                </ol>
             </div>
             <form action="includes/form.inc.php" method="post">
                 <input type="text" name="fullname" placeholder="Fullname">

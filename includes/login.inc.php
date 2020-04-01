@@ -1,7 +1,7 @@
 <?php
-    if (isset($_POST['login-submit'])) {
-        require 'dbh.inc.php';
+    require 'dbh.inc.php';
 
+    if (isset($_POST['login-submit'])) {
         $mailusername = $_POST['mailusername'];
         $password = $_POST['password'];
 

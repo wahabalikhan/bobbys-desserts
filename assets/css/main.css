@@ -60,16 +60,14 @@ section, header, footer {
     text-transform: uppercase;
 }
 .product-image {
+    position: absolute;
     top: 0;
     left: -70px;
-    margin: 0;
-    position: absolute;
 }
 .product-image img {
     border-radius: 999px;
     width: 50px;
     height: 50px;
-    margin: 0;
 }
 .product-price {
     float: right;
@@ -77,8 +75,7 @@ section, header, footer {
     margin-top: -47px;
 }
 .allergy-image {
-    margin-top: 10px;
-    margin-right: 10px;
+    margin: 10px 10px 0 0;
     width: 35px;
     height: 35px;
 }
@@ -132,9 +129,9 @@ h2 {
     font-weight: 300;
 }
 h3 {
-    font-size: 24px;
-    margin: 0;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 30px;
 }
 p {
     font-size: 16px;
@@ -144,9 +141,6 @@ p {
 header {
     text-align: center;
     width: 100%;
-}
-header .container {
-    position: relative;
 }
 .toggle {
     float: right;
@@ -177,7 +171,6 @@ nav {
     cursor: pointer;
     float: left;
     margin: 0;
-    font-weight: 900;
 }
 .logo:hover {
     opacity: 1;
@@ -280,10 +273,15 @@ header p {
 .contact-grid p {
     margin: 50px 0;
 }
-
+footer ul {
+    margin: 50px 0 0 20px;
+}
+footer ol {
+    margin-left: 20px;
+}
 .social-icons {
     max-width: 200px;
-    margin-left: -20px;
+    margin: 50px 0 50px -20px;
     display: flex;
     justify-content: space-around;
 }
@@ -321,9 +319,13 @@ textarea {
 .signup-login-grid {
     grid-gap: 100px;
 }
-.signup-login-form-header {
-    font-weight: 900;
-    margin-bottom: 30px;
+
+/* admin panel */
+.panel-heading {
+    margin: 50px 0 20px;
+}
+.delete {
+    color: red;
 }
 
 /* responsive */
@@ -338,7 +340,7 @@ textarea {
     .toggle {
         display: block;
     }
-    ul {
+    header ul {
         display: none;
         position: absolute;
         right: 10px;
@@ -350,17 +352,17 @@ textarea {
     .active {
         display: block;
     }
-    ul a {
+    header ul a {
         display: block;
         margin: 40px 0;
         color: black;
     }
-    ul .signup-login {
+    header ul .signup-login {
         color:#66D6B6;
         padding: 0;
         margin: 0 0 40px 0;
     }
-    ul .logout {
+    header ul .logout {
         padding: 0;
     }
     .hero {
@@ -368,6 +370,7 @@ textarea {
     }
     .slogan {
         text-align: center;
+        margin-left: 40px;
     }
     #searchbar {
         width: 100%;
@@ -409,5 +412,10 @@ textarea {
     }
     .product-info {
         width: 85%;
+    }
+}
+@media screen and (max-width: 422px) {
+    .slogan {
+        margin-left: 0;
     }
 }

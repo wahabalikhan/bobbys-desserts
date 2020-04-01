@@ -1,16 +1,8 @@
 // smooth scroll
-const scroll = new SmoothScroll('.learn-more[href*="#about"]', {
-  speed: 1000
-});
-const scroll2 = new SmoothScroll('.specials[href*="#specials"]', {
-  speed: 1000
-});
-const scroll3 = new SmoothScroll('.gallery[href*="#gallery"]', {
-  speed: 1000
-});
-const scroll4 = new SmoothScroll('.contact[href*="#contact"]', {
-  speed: 1000
-});
+const aboutScroll = new SmoothScroll('.learn-more[href*="#about"]', { speed: 1000 });
+const specialsScroll = new SmoothScroll('.specials[href*="#specials"]', { speed: 1000 });
+const galleryScroll = new SmoothScroll('.gallery[href*="#gallery"]', { speed: 1000 });
+const contactScroll = new SmoothScroll('.contact[href*="#contact"]', { speed: 1000 });
 
 // toggle menu
 const toggle = document.querySelector('.toggle');

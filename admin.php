@@ -5,9 +5,6 @@
     if (!isAdmin()) {
         header("Location: index.php");
     }
-
-    $con = mysqli_connect('localhost','root','root');
-    mysqli_select_db($con,'bobbys_desserts');
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +29,11 @@
     <section id="admim">
         <div class="container">
             <div class="user-panel">
-                <h2>User panel</h2>
+                <h2 class="panel-heading">User panel</h2>
                 <p class="heading">Add user</p>
                 <table>
                     <tr>
-                        <th>Name</th>
+                        <th>Username</th>
                         <th>Email address</th>
                         <th>Password</th>
                     </tr>
@@ -57,7 +54,7 @@
                 <p class="heading">Update users</p>
                 <table>
                     <tr>
-                        <th>Name</th>
+                        <th>Username</th>
                         <th>Email address</th>
                         <th>Password</th>
                         <th>User level</th>
@@ -82,23 +79,25 @@
                 <p class="heading">Remove users</p>
                 <table>
                     <tr>
-                        <th>Name</th>
+                        <th>Username</th>
                         <th>Email address</th>
                         <th>Password</th>
+                        <th>User level</th>
                     </tr>
                     <?php
                         while ($row = mysqli_fetch_array($records)) {
                             echo "<tr><td>".$row['username']."</td>
                             <td>".$row['email_address']."</td>
                             <td>".$row['password']."</td>
-                            <td><a href=includes/delete.inc.php?user_id=".$row['user_id'].">Delete</a></td>
+                            <td>".$row['user_level']."</td>
+                            <td><a class='delete' href=includes/delete.inc.php?user_id=".$row['user_id'].">Delete</a></td>
                             <tr>";
                         }
                     ?>
                 </table>
             </div>
             <div class="product-panel">
-                <h2>Product panel</h2>
+                <h2 class="panel-heading">Product panel</h2>
                 <p class="heading">Add product</p>
                 <table>
                     <tr>
@@ -108,6 +107,7 @@
                         <th>Special</th>
                         <th>Vegetarian</th>
                         <th>Gluten free</th>
+                        <th>Image directory</th>
                     </tr>
                     <?php
                         echo "<tr><form action='includes/insert.inc.php' method='POST' enctype='multipart/form-data'>
@@ -115,8 +115,8 @@
                         <td><input type=text name=product_price value='".$row["product_price"]."'></td>
                         <td><input type=text name=product_description value='".$row["product_description"]."'></td>
                         <td><input type=text name=special value='".$row["special"]."'></td>
-                        <td><select name=vegetarian value='".$row["vegetarian"]."'><option value=1>True</option><option value=0>False</option></td>
-                        <td><select name=gluten_free value='".$row["gluten_free"]."'><option value=1>True</option><option value=0>False</option></td>
+                        <td><input type=text name=vegetarian value='".$row["vegetarian"]."'></td>
+                        <td><input type=text name=gluten_free value='".$row["gluten_free"]."'></td>
                         <td><input type=text name=image_directory value='".$row["image_directory"]."'></td>
                         <input type=hidden name=product_id value='".$row["product_id"]."'>
                         <td><input type='submit' name='add-product' value='Add'></td>
@@ -136,6 +136,7 @@
                         <th>Special</th>
                         <th>Vegetarian</th>
                         <th>Gluten free</th>
+                        <th>Image directory</th>
                     </tr>
                     <?php
                         while ($row = mysqli_fetch_array($records)) {
@@ -144,8 +145,9 @@
                             <td><input type=text name=product_price value='".$row["product_price"]."'></td>
                             <td><input type=text name=product_description value='".$row["product_description"]."'></td>
                             <td><input type=text name=special value='".$row["special"]."'></td>
-                            <td><select name=vegetarian value='".$row["vegetarian"]."'><option value=1>True</option><option value=0>False</option></td>
-                            <td><select name=gluten_free value='".$row["gluten_free"]."'><option value=1>True</option><option value=0>False</option></td>
+                            <td><input type=text name=vegetarian value='".$row["vegetarian"]."'></td>
+                            <td><input type=text name=gluten_free value='".$row["gluten_free"]."'></td>
+                            <td><input type=text name=image_directory value='".$row["image_directory"]."'></td>
                             <input type=hidden name=product_id value='".$row["product_id"]."'>
                             <td><input type='submit' value='Update'></td>
                             </form><tr>";
@@ -165,6 +167,7 @@
                         <th>Special</th>
                         <th>Vegetarian</th>
                         <th>Gluten free</th>
+                        <th>Image directory</th>
                     </tr>
                     <?php
                         while ($row = mysqli_fetch_array($records)) {
@@ -174,7 +177,8 @@
                                 <td>".$row['special']."</td>
                                 <td>".$row['vegetarian']."</td>
                                 <td>".$row['gluten_free']."</td>
-                                <td><a name='delete-product' href=includes/delete.inc.php?product_id=".$row['product_id'].">Delete</a></td>
+                                <td>".$row['image_directory']."</td>
+                                <td><a class='delete' name='delete-product' href=includes/delete.inc.php?product_id=".$row['product_id'].">Delete</a></td>
                                 <tr>";
                         }
                     ?>
@@ -186,6 +190,7 @@
     <?php require "footer.php"?>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
