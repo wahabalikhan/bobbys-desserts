@@ -50,9 +50,9 @@
                     while ($row = mysqli_fetch_array($records)) {
                         if ($row['special'] == 1) {
                             echo "<div class='product-item'>
-                                <div class='product-image'><img src='".$row['image_directory']."' alt=''></div>
                                 <div class='product-info'>
                                 <div class='product-name'>".$row['product_name']."</div>
+                                <div class='product-image'><img src='".$row['image_directory']."' alt=''></div>
                                 <div class='product-price'>£".$row['product_price']."</div>
                                 <p>".$row['product_description']."</p>"?>
                             <?php
@@ -90,17 +90,7 @@
     <?php require "footer.php"?>
     
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
-
-<!-- <div class="product-item">
-                    <div class="product-image"><img src="assets/img/products/product_image_2.png" alt=""></div>
-                    <div class="product-info">
-                        <div class="product-name">KINDER BUENO WAFFLE</div>
-                        <div class="product-price">£7.99</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo eos, ea tempore reiciendis veritatis eveniet aspernatur neque provident voluptatem?</p>
-                        <img src="assets/img/vegetarian.png" alt="" class="allergy-image">
-                        <img src="assets/img/gluten_free.png" alt="" class="allergy-image">
-                    </div>
-                </div> -->

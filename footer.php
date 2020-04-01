@@ -26,7 +26,7 @@
                 </div>
                 <p>© Bobby's Desserts 2020. All rights reserved.</p>
             </div>
-            <form action="">
+            <form action="includes/form.inc.php" method="post">
                 <input type="text" name="fullname" placeholder="Fullname">
                 <input type="text" name="email_address" placeholder="Email address">
                 <input type="text" name="subject" placeholder="Subject">
