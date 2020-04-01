@@ -45,6 +45,7 @@
                     while ($row = mysqli_fetch_array($records)) {
                         if ($row['special'] == 1) {
                             echo "<div class='product-item'>
+                                <div class='product-name hidden'>".$row['product_name']."</div>
                                 <div class='product-info'>
                                 <div class='product-name'>".$row['product_name']."</div>
                                 <div class='product-image'><img src='".$row['image_directory']."' alt=''></div>

@@ -59,6 +59,9 @@ section, header, footer {
     margin-bottom: 30px;
     text-transform: uppercase;
 }
+.hidden {
+    display: none;
+}
 .product-image {
     position: absolute;
     top: 0;
@@ -376,7 +379,8 @@ textarea {
         width: 100%;
     }
     #about {
-        margin-bottom: 360px;
+        margin-bottom: 0px;
+        padding-top: 0px;
     }
     #about img {
         display: none;
@@ -384,6 +388,7 @@ textarea {
     .about-box {
         width: 100%;
         text-align: center;
+        position: static;
     }
     .grid {
         grid-gap: 20px;

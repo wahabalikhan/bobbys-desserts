@@ -18,15 +18,11 @@ searchBar.addEventListener('keyup', function(e) {
   const items = document.getElementsByClassName('product-item');
 
   Array.from(items).forEach(function(item) {
-    const itemInfos = document.getElementsByClassName('product-info');
-    Array.from(itemInfos).forEach(function(itemInfo) {
-      const title = itemInfo.firstElementChild.textContent;
-
-      if (title.toUpperCase().indexOf(term) !=-1) {
-        itemInfo.style.display = 'block';
-      } else {
-        itemInfo.style.display = 'none';
-      }
-    });
+    const title = item.firstElementChild.textContent;
+    if (title.toUpperCase().indexOf(term) !=-1) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
   });
 });
