@@ -7,7 +7,7 @@
         $password = $_POST['password'];
 
         $sql = "INSERT INTO users (username, email_address, password) VALUES ('$username','$emailAddress','$password')";
-        if (!mysqli_query($con, $sql)) {
+        if (!mysqli_query($conn, $sql)) {
             echo "Failed to insert record";
         } else {
             echo "Successfully inserted record";
@@ -25,7 +25,7 @@
         $imageDirectory = $_POST['image_directory'];
 
         $sql = ("INSERT INTO products (product_name, product_price, product_description, special, vegetarian, gluten_free, image_directory) VALUES ('$productName','$productPrice','$productDescription','$special','$vegetarian','$glutenFree','$imageDirectory')");
-        if (!mysqli_query($con, $sql)) {
+        if (!mysqli_query($conn, $sql)) {
             echo "Failed to insert record";
         } else {
             echo "Successfully inserted record";
