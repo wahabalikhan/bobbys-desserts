@@ -26,7 +26,7 @@
             <div class="product-grid grid">
                 <?php
                     $sql = "SELECT * FROM products";
-                    $records = mysqli_query($con, $sql);
+                    $records = mysqli_query($conn, $sql);
                 ?>
                 <?php
                     while ($row = mysqli_fetch_array($records)) {
