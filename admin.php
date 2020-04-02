@@ -49,7 +49,7 @@
                 </table>
                 <?php
                     $sql = "SELECT * FROM users";
-                    $records = mysqli_query($con, $sql);
+                    $records = mysqli_query($conn, $sql);
                 ?>
                 <p class="heading">Update users</p>
                 <table>
@@ -74,7 +74,7 @@
                 </table>
                 <?php
                     $sql = "SELECT * FROM users";
-                    $records = mysqli_query($con, $sql);
+                    $records = mysqli_query($conn, $sql);
                 ?>
                 <p class="heading">Remove users</p>
                 <table>
@@ -125,7 +125,7 @@
                 </table>
                 <?php
                     $sql = "SELECT * FROM products";
-                    $records = mysqli_query($con, $sql);
+                    $records = mysqli_query($conn, $sql);
                 ?>
                 <p class="heading">Update products</p>
                 <table>
@@ -156,7 +156,7 @@
                 </table>
                 <?php
                     $sql = "SELECT * FROM products";
-                    $records = mysqli_query($con, $sql);
+                    $records = mysqli_query($conn, $sql);
                 ?>
                 <p class="heading">Remove products</p>
                 <table>
