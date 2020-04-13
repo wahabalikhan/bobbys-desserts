@@ -18,7 +18,7 @@
             <div class="hero">
                 <h1 class="title">Bobby's Desserts</h1>
                 <h1 class="slogan">It hits different...</h1>
-                <p>Take a dive into our award-winning desserts and venues as we provide customers with only the best and ensure they leave with a smile on their face. BobbyBoy Desserts is the number one stop for a delectable range of gelato, desserts and hot puddings served and prepared freshly in house by our experienced staff. We pride ourselves on our specialist range of desserts.</p>
+                <p>Take a dive into our award-winning desserts and venues as we provide customers with only the best and ensure they leave with a smile on their face. Bobby's Desserts is the number one stop for a delectable range of gelato, desserts and hot puddings served and prepared freshly in house by our experienced staff. We pride ourselves on our specialist range of desserts.</p>
             </div>
             <a href="#about" class="learn-more btn">LEARN MORE</a>
         </div>
@@ -28,7 +28,7 @@
             <img src="assets/img/about.png" alt="">
             <div class="about-box">
                 <h2>MAKE IT A NIGHT TO REMEMBER</h2>
-                <p>At BobbyBoy Desserts, we make sure that our customers leave with a night to remember. We ensure that we give our customers an experience that they'll never forget with our warm, welcoming atmosphere, friendly staff and exotic specials desserts.</p>
+                <p>At Bobby's Desserts, we make sure that our customers leave with a night to remember. We ensure that we give our customers an experience that they'll never forget with our warm, welcoming atmosphere, friendly staff and exotic specials desserts.</p>
                 <a href="#specials" class="specials btn">OUR SPECIALS</a>
             </div>
         </div>
