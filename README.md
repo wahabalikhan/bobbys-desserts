@@ -23,7 +23,7 @@ access features within the site in order to add, remove and update users and the
 ***
 
 # How to run the website
-Path to index: http://lamp.scim.brad.ac.uk:50226/hamoud/index.php.
+Path to index: http://lamp.scim.brad.ac.uk:50320/bobbys-desserts/index.php.
 
 * admin username and password: admin, admin.
 * generic username and password: wahab, test.
