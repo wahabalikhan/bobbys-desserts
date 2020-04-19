@@ -15,7 +15,7 @@ toggle.addEventListener('click', () => {
 const searchBar = document.querySelector('#searchbar');
 searchBar.addEventListener('keyup', function(e) {
   const term = e.target.value.toUpperCase();
-  const items = document.getElementsByClassName('product-item');
+  const items = document.getElementsByClassName('item');
 
   Array.from(items).forEach(function(item) {
     const title = item.firstElementChild.textContent;

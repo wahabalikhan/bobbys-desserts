@@ -12,7 +12,8 @@
                 <ul class="main-nav">
                     <a href="menu.php">Menu</a>
                     <a href="index.php#gallery" class="gallery">Gallery</a>
-                    <a href="#contact" class="contact">Contact</a>'?>
+                    <a href="#contact" class="contact">Contact</a>
+                    <a href="users.php">Users</a>'?>
                     <?php echo '<a href="admin.php">Admin panel</a>';?>
                     <?php echo '<a>Logged in as: '.$_SESSION['session_username'].'</a>';?>
                     <?php echo '<a href="includes/logout.inc.php"><button type="submit" name="logout-submit" class="logout btn">Logout</button></a>
@@ -23,7 +24,8 @@
                 <ul class="main-nav">
                     <a href="menu.php">Menu</a>
                     <a href="index.php#gallery" class="gallery">Gallery</a>
-                    <a href="#contact" class="contact">Contact</a>'?>
+                    <a href="#contact" class="contact">Contact</a>
+                    <a href="users.php">Users</a>'?>
                     <?php echo '<a>Logged in as: '.$_SESSION['session_username'].'</a>';?>
                     <?php echo '<a href="includes/logout.inc.php"><button type="submit" name="logout-submit" class="logout btn">Logout</button></a>
                 </ul>
